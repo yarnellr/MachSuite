@@ -55,7 +55,9 @@ void hist(int bucket[BUCKETSIZE], int a[SIZE], int exp)
         hist_2 : for(i=0; i<4; i++) {
             a_indx = blockID * ELEMENTSPERBLOCK + i;
             bucket_indx = ((a[a_indx] >> exp) & 0x3)*NUMOFBLOCKS + blockID + 1;
-            bucket[bucket_indx]++;
+            if (bucket_indx < BUCKETSIZE) {
+                bucket[bucket_indx]++;
+            }
         }
     }
 }
