@@ -16,5 +16,6 @@ source ./aes_dir
 #config_rtl -reset all -reset_level low
 csynth_design
 cosim_design -rtl verilog -tool modelsim -trace_level all
+export_design -rtl verilog -format ip_catalog
 
 exit

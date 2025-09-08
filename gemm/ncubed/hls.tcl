@@ -14,5 +14,6 @@ create_clock -period 10
 source ./gemm_dir
 csynth_design
 cosim_design -rtl verilog -tool modelsim -trace_level all
+export_design -rtl verilog -format ip_catalog
 
 exit

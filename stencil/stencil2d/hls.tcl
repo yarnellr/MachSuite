@@ -18,5 +18,6 @@ source ./stencil_dir
 
 csynth_design
 cosim_design -rtl verilog -tool modelsim
+export_design -rtl verilog -format ip_catalog
 
 exit

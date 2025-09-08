@@ -18,4 +18,6 @@ set_clock_uncertainty 0
 config_rtl -reset all -reset_level low
 csynth_design
 cosim_design -tool modelsim -rtl verilog -trace_level all
+export_design -rtl verilog -format ip_catalog
+
 exit

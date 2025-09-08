@@ -18,18 +18,23 @@ void md( int n_points[blockSide][blockSide][blockSide],
   loop_grid0_z: for( b0.z=0; b0.z<blockSide; b0.z++ ) {
   // Iterate over the 3x3x3 (modulo boundary conditions) cube of blocks around b0
   loop_grid1_x: for( b1.x=MAX(0,b0.x-1); b1.x<MIN(blockSide,b0.x+2); b1.x++ ) {
+  #pragma HLS loop_tripcount min=blockSide max=blockSide
   loop_grid1_y: for( b1.y=MAX(0,b0.y-1); b1.y<MIN(blockSide,b0.y+2); b1.y++ ) {
+  #pragma HLS loop_tripcount min=blockSide max=blockSide
   loop_grid1_z: for( b1.z=MAX(0,b0.z-1); b1.z<MIN(blockSide,b0.z+2); b1.z++ ) {
+    #pragma HLS loop_tripcount min=blockSide max=blockSide
     // For all points in b0
     dvector_t *base_q = position[b1.x][b1.y][b1.z];
     int q_idx_range = n_points[b1.x][b1.y][b1.z];
     loop_p: for( p_idx=0; p_idx<n_points[b0.x][b0.y][b0.z]; p_idx++ ) {
+      #pragma HLS loop_tripcount min=densityFactor max=densityFactor
       p = position[b0.x][b0.y][b0.z][p_idx];
       TYPE sum_x = force[b0.x][b0.y][b0.z][p_idx].x;
       TYPE sum_y = force[b0.x][b0.y][b0.z][p_idx].y;
       TYPE sum_z = force[b0.x][b0.y][b0.z][p_idx].z;
       // For all points in b1
       loop_q: for( q_idx=0; q_idx< q_idx_range ; q_idx++ ) {
+        #pragma HLS loop_tripcount min=densityFactor max=densityFactor
         q = *(base_q + q_idx);
 
         // Don't compute our own

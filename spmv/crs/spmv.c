@@ -14,6 +14,7 @@ void spmv(TYPE val[NNZ], int32_t cols[NNZ], int32_t rowDelimiters[N+1], TYPE vec
         int tmp_begin = rowDelimiters[i];
         int tmp_end = rowDelimiters[i+1];
         spmv_2 : for (j = tmp_begin; j < tmp_end; j++){
+            #pragma HLS loop_tripcount min=10 max=10
             Si = val[j] * vec[cols[j]];
             sum = sum + Si;
         }

@@ -26,6 +26,7 @@ void bfs(node_t nodes[N_NODES], edge_t edges[N_EDGES],
         edge_index_t tmp_begin = nodes[n].edge_begin;
         edge_index_t tmp_end = nodes[n].edge_end;
         loop_neighbors: for( e=tmp_begin; e<tmp_end; e++ ) {
+          #pragma HLS loop_tripcount min=N_EDGES max=N_EDGES
           node_index_t tmp_dst = edges[e].dst;
           level_t tmp_level = level[tmp_dst];
 
