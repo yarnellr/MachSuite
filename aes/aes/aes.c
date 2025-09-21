@@ -162,6 +162,7 @@ void aes_expandEncKey(uint8_t *k, uint8_t *rc)
 
     exp1 : for(i = 4; i < 16; i += 4)  k[i] ^= k[i-4],   k[i+1] ^= k[i-3],
         k[i+2] ^= k[i-2], k[i+3] ^= k[i-1];
+
     k[16] ^= rj_sbox(k[12]);
     k[17] ^= rj_sbox(k[13]);
     k[18] ^= rj_sbox(k[14]);
