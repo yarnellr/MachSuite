@@ -1,4 +1,4 @@
-open_project backprop_syn
+open_project hls_prj
 
 add_files backprop.c
 add_files input.data
@@ -17,7 +17,7 @@ set_part virtex7
 create_clock -period 10
 #source ./stencil_dir
 
-csim_design
+#csim_design
 
 csynth_design
 #cosim_design -rtl verilog -tool modelsim -trace_level all

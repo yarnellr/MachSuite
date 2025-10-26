@@ -1,4 +1,4 @@
-open_project fft_syn
+open_project hls_prj
 
 add_files fft.c
 add_files input.data

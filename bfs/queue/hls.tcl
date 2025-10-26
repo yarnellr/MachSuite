@@ -1,4 +1,4 @@
-open_project bfs_syn
+open_project hls_prj
 
 add_files bfs.c
 add_files input.data

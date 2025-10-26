@@ -1,4 +1,4 @@
-open_project stencil_syn
+open_project hls_prj
 
 add_files stencil.c
 add_files input.data

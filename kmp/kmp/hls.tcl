@@ -1,4 +1,4 @@
-open_project kmp_syn
+open_project hls_prj
 
 add_files kmp.c
 add_files input.data

@@ -1,4 +1,4 @@
-open_project sort_syn
+open_project hls_prj
 
 set_top ss_sort
 

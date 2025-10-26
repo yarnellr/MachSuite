@@ -1,4 +1,4 @@
-open_project sort_syn
+open_project hls_prj
 
 add_files sort.c
 add_files input.data

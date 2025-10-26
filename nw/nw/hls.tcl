@@ -1,4 +1,4 @@
-open_project nw_syn
+open_project hls_prj
 
 add_files nw.c
 add_files input.data

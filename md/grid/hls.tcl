@@ -1,4 +1,4 @@
-open_project grid_syn
+open_project hls_prj
 
 add_files md.c
 add_files input.data

@@ -1,4 +1,4 @@
-open_project fft_syn
+open_project hls_prj
 
 set_top fft1D_512
 
