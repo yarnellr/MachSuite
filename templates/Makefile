@@ -19,5 +19,5 @@ hls: $(KERN).c $(KERN).h
 	vitis_hls hls.tcl
 
 clean:
-	rm -f $(KERN)
+	rm -f $(KERN) hls_prj
 	rm -f generate

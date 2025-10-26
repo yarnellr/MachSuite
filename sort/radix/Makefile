@@ -20,4 +20,4 @@ hls: $(KERN).c $(KERN).h
 	vitis_hls hls.tcl
 
 clean:
-	rm -f $(KERN) generate output.data
+	rm -f $(KERN) hls_prj generate output.data
