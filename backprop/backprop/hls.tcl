@@ -1,13 +1,13 @@
 open_project hls_prj
 
 add_files backprop.c
-add_files input.data
-add_files check.data
-add_files local_support.c
+#add_files input.data
+#add_files check.data
+#add_files local_support.c
 
-add_files -tb ../../common/support.c
-add_files -tb ../../common/support.h
-add_files -tb ../../common/harness.c 
+#add_files -tb ../../common/support.c
+#add_files -tb ../../common/support.h
+#add_files -tb ../../common/harness.c
 
 
 set_top backprop
