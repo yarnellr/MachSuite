@@ -9,7 +9,6 @@
 #define WRITE_OUTPUT
 #define CHECK_OUTPUT
 
-#include "support.h"
 
 int main(int argc, char **argv)
 {

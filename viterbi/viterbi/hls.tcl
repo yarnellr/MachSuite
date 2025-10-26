@@ -17,7 +17,7 @@ create_clock -period 10
 #config_rtl -reset all -reset_level low
 
 csynth_design
-cosim_design -rtl verilog -tool modelsim 
-export_design -rtl verilog -format ip_catalog
+#cosim_design -rtl verilog -tool modelsim 
+#export_design -rtl verilog -format ip_catalog
 
 exit

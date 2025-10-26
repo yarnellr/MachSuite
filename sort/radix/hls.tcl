@@ -19,7 +19,7 @@ source ./inline_dir
 #config_rtl -reset all -reset_level low
 set_clock_uncertainty 0
 csynth_design 
-cosim_design -rtl verilog -tool modelsim -trace_level all
-export_design -rtl verilog -format ip_catalog
+#cosim_design -rtl verilog -tool modelsim -trace_level all
+#export_design -rtl verilog -format ip_catalog
 
 exit

@@ -1,4 +1,3 @@
-#include "support.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
