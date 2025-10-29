@@ -15,7 +15,7 @@ open_solution -reset solution
 
 set_part virtex7
 create_clock -period 10
-#source ./stencil_dir
+#source ./backprop_dir
 
 #csim_design
 
