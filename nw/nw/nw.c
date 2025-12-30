@@ -61,8 +61,8 @@ void needwun(char SEQA[ALEN], char SEQB[BLEN],
     a_str_idx = 0;
     b_str_idx = 0;
 
-    trace: for (int i = ALEN + BLEN - 1; i > 0; i++) {
-        #pragma HLS loop_tripcount min=ALEN+BLEN-1 max=ALEN+BLEN-1
+    trace: for (int i = 0; i < ALEN + BLEN; i++) {
+        #pragma HLS loop_tripcount min=ALEN+BLEN max=ALEN+BLEN
         if (a_idx == 0 && b_idx == 0) break;
         r = b_idx*(ALEN+1);
         if (ptr[r + a_idx] == ALIGN){
